@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator BMI</title>
-    <link href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="script/script.js"></script>
 </head>
 <body>
-    <header>
+    <!-- <header>
         <h1>Kalkulator BMI</h1>
     </header>
     <main>
-        <div>
         <article>Body Mass Index atau BMI adalah salah satu cara untuk mengetahui berat badan ideal seseorang yang diukur berdasarkan berat dan tinggi badan Anda.
             Dengan menggunakan kalkulator BMI ini Anda dapat memonitor tubuh Anda dengan akurat.
         </article>
-        <form action="">
+        <div>
+        <form>
             <div>
                 <label for="jenkel">Jenis Kelamin</label>
                 <input type="radio" id="pria" name="jenis-kelamin" value="Pria">
@@ -43,6 +43,25 @@
         <div>
             <h1>Hasil</h1>
         </div>
-    </main>
+    </main> -->
+    <div class="container">
+        <!-- Judul -->
+            <h1>Kalkulator BMI</h1>
+        <!-- isi utama -->
+            <form action="" class="kalkulatorBMI">
+                <div>
+                    <label for="berat"> Berat (Kg)</label>
+                    <input type="number" id="berat" value="0">
+                </div>
+                <div>
+                    <label for="tinggi"> Tinggi (Cm)</label>
+                    <input type="number" id="tinggi" value="0">
+                </div>
+                <div>
+                    <button type="submit">Hitung BMI</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </form>
+    </div>
 </body>
 </html>
