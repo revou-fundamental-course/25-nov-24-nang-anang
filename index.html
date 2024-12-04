@@ -5,63 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator BMI</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="script/script.js"></script>
 </head>
 <body>
-    <!-- <header>
-        <h1>Kalkulator BMI</h1>
-    </header>
-    <main>
-        <article>Body Mass Index atau BMI adalah salah satu cara untuk mengetahui berat badan ideal seseorang yang diukur berdasarkan berat dan tinggi badan Anda.
-            Dengan menggunakan kalkulator BMI ini Anda dapat memonitor tubuh Anda dengan akurat.
-        </article>
-        <div>
-        <form>
-            <div>
-                <label for="jenkel">Jenis Kelamin</label>
-                <input type="radio" id="pria" name="jenis-kelamin" value="Pria">
-                <label for="pria">Pria</label>
-                <input type="radio" id="wanita" name="jenis-kelamin" value="Wanita">
-                <label for="pria">Wanita</label>
-            </div>
-            <div>
-                <label for="beratbadan">Berat Badan (Kg)</label>
-                <input type="number" id="beratbadan">
-            </div>
-            <div>
-                <label for="usia">Usia (tahun)</label>
-                <input type="number" id="usia">
-            </div>
-            <div>
-                <label for="tinggibadan">Tinggi Badan (cm)</label>
-                <input type="number" id="tinggibadan">
-            </div>  
-                <button id="hitungBMI">Hitung BMI</button>
-                <button id="reset">Reset</button>
-        </form>
-        </div>
-        <div>
-            <h1>Hasil</h1>
-        </div>
-    </main> -->
-    <div class="container">
-        <!-- Judul -->
+    <!-- Judul -->
+        <header>
             <h1>Kalkulator BMI</h1>
-        <!-- isi utama -->
+        </header>
+    <!-- isi utama -->
+         <main>
+            <section class="main-section">
+            <!-- Form untuk inputan data -->
             <form action="" class="kalkulatorBMI">
-                <div>
-                    <label for="berat"> Berat (Kg)</label>
-                    <input type="number" id="berat" value="0">
+                <div id="form-input">
+                    <label for="jenkel">Jenis Kelamin</label> 
+                    <input type="radio" id="pria" name="jenis-kelamin">
+                    <label for="pria">Pria</label>
+                    <input type="radio" id="wanita" name="jenis-kelamin">
+                    <label for="wanita">Wanita</label>
                 </div>
                 <div>
-                    <label for="tinggi"> Tinggi (Cm)</label>
-                    <input type="number" id="tinggi" value="0">
+                    <label for="berat"> Berat Badan (Kg)</label>
+                    <input type="number" id="berat" placeholder="Masukan berat badan">
                 </div>
                 <div>
-                    <button type="submit">Hitung BMI</button>
+                    <label for="usia"> Usia (Tahun)</label>
+                    <input type="number" id="usia" placeholder="Masukkan usia">
+                </div>
+                <div>
+                    <label for="tinggi"> Tinggi Badan (Cm)</label>
+                    <input type="number" id="tinggi" placeholder="Masukkan tinggi badan">
+                </div>
+                <div>
+                    <button type="button" onclick="validateForm();">Hitung BMI</button>
                     <button type="reset">Reset</button>
                 </div>
             </form>
-    </div>
+            </section>
+        <!-- bagian untuk menampilkan hasil -->
+            <section class="main-section" id="hasil">
+                <h3>Hasil BMI Anda</h3>
+                <div id="result">0</div>
+            </section>
+    </main>
+    <script src="script/script.js"></script>
 </body>
 </html>
