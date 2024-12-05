@@ -7,10 +7,11 @@ form.addEventListener("submit", onFormSubmit);
 function onFormSubmit(e){
     e.preventDefault();
 
-    const berat = parseFloat(form.berat.value);
-    const tinggi = parseFloat(form.tinggi.value);
-    const usia = parseInt(form.usia.value);
+    const berat = parseFloat(form.berat.value); /*mengambil nilai berat*/
+    const tinggi = parseFloat(form.tinggi.value); /*mengambil nilai tinggi*/
+    const usia = parseInt(form.usia.value); /*mengambil nilai usia*/
 
+    // percabangan untuk validasi inputan
     if (isNaN(berat)|| isNaN(tinggi) ||isNaN(usia)|| berat <=0 || tinggi <=0 || usia <=0 ){
         alert ("Mohon masukkan data dengan benar!");
         return;
@@ -37,6 +38,7 @@ function kriteriaBMI(bmi){
     }
 }
 
+// tombol reset untuk hasil BMI dan status
 function reset(){
     document.getElementById('result').value.reset();
     document.getElementById('status').value.reset();

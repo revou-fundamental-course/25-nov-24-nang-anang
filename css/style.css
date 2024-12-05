@@ -1,11 +1,14 @@
 *{
     font-family: sans-serif; /*jenis keseluruhan font*/
 }
+
+/* keseluruhan body */
 body{
     display: grid;
     place-items: center;
 }
 
+/* warna text judul dan posisi judul */
 h1{
     text-align: center;
     color: blue;
